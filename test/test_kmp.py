@@ -6,7 +6,7 @@ from kmp import kmp
 class Test_strFind(unittest.TestCase):
 
     def setUp(self):
-        matrix = 'iacdabcabcdabcabcix' 
+        matrix = 'acdabcabcdabcabcx' 
         child = 'abcabcx'
         self.sF = kmp.strFind(child, matrix)
     def tearDown(self):
@@ -18,7 +18,7 @@ class Test_strFind(unittest.TestCase):
         self.assertEqual(self.sF.part_list, l)
 
     def test_find(self):
-        self.assertFalse(self.sF.find())
+        self.assertTrue(self.sF.find())
 
 
 if __name__ == '__main__':

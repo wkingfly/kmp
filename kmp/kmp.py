@@ -1,5 +1,3 @@
-import pdb
-
 class strFind:
     def __init__(self, child, matrix):
         self.child = list(child)
@@ -42,8 +40,6 @@ class strFind:
             if i == self.child[j]:
                 equals += 1
                 j += 1
-                if equals == 6:
-                    pdb.set_trace()
                 if equals == len(self.child):
                     return True
             else:
@@ -52,5 +48,7 @@ class strFind:
                 else:
                     move_num = 1
                 self.matrix = self.matrix[move_num:len(self.matrix)]
-                self.find()
-        return False
+                if len(self.matrix) < len(self.child):
+                    return False     
+
+                return self.find()
