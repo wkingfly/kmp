@@ -8,15 +8,15 @@ class strFind:
     def part_match(self):
         matrix_len = len(self.matrix)
         child_len = len(self.child)
-        matrix_part = []
+        child_part = []
         i = 0
         if self.part_list:
             return
         while i < matrix_len:
             i += 1
-            matrix_part.append(self.child[0:i])
+            child_part.append(self.child[0:i])
 
-        for i in matrix_part:
+        for i in child_part:
             prefix = []
             postfix = []
             j = 1
